@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Testfeat.App">
+    <Application.Resources>
+        <!--  Colors  -->
+        <Color x:Key="Background">#12140C</Color>
+        <Color x:Key="Accent">#BFE05F</Color>
+        <Color x:Key="BackgroundGradientStart">#272821</Color>
+        <Color x:Key="BodyText">#797A76</Color>
+        <!--Fonts-->
+        <ResourceDictionary>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="Bold">
+                <On Platform="Android" Value="OpenSans-Bold#Cairo" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="Regular">
+                <On Platform="Android" Value="OpenSans-Regular.ttf#Cairo" />
+            </OnPlatform>
+            
+            <OnPlatform x:TypeArguments="x:String" x:Key="SemiBold">
+                <On Platform="Android" Value="OpenSans-SemiBold#Cairo" />
+            </OnPlatform>
+        </ResourceDictionary>
+        <!--  Styles  -->
+        <Style x:Key="OnboardingHeader" TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="Margin" Value="20" />
+            <Setter Property="FontFamily" Value="{StaticResource Bold}"/>
+            <Setter Property="FontSize" Value="32" />
+        </Style>
+
+        <Style x:Key="OnboardingContent" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource BodyText}" />
+            <Setter Property="Margin" Value="20,0" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="{StaticResource SemiBold}"/>
+        </Style>
+        <Style x:Key="SubHeader" TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontFamily" Value="{StaticResource SemiBold}" />
+            <Setter Property="FontSize" Value="8" />
+        </Style>
+    </Application.Resources>
+</Application>
